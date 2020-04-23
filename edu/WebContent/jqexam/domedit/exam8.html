@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .first { color:Red; }
+        .second { color:Pink; }
+        .third { color:Orange; }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>
+    	// attr(),苞 css()狼 瞒捞
+    	// attr('HTML 加纪港') ----> getter
+    	// attr('HTML 加纪港', HTML加己蔼) ----> getter
+    	// attr('HTML 加己疙', 窃荐)
+    	// attr('HTML 加己疙':HTML加己蔼,'HTML 加己疙':HTML加己蔼,)
+        $(document).ready(function () {
+            $('h1').each(function(index,data) {
+        		var color = $(data).css('color');
+        		 alert(color); 
+        	});
+            
+         	// attr(),苞 css()狼 瞒捞
+        	// css('css 加纪港') ----> getter
+        	// css('css 加纪港', css加己蔼) ----> getter
+        	// css('css 加己疙', 窃荐)
+        	// css('css 加己疙':css加己蔼,'css 加己疙':css加己蔼,)
+         	/* var color = $('h1').css('color');
+        	alert(color);    */
+        });
+    </script>
+</head>
+<body>
+    <h1 class="first">Header-0</h1>
+    <h1 class="second">Header-1</h1>
+    <h1 class="third">Header-2</h1>
+</body>
+</html>
+
+

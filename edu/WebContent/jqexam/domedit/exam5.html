@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('img').attr('width', function (index) {
+            	// attr이 함수다.
+            	// width의 속성을 함수를 실핸한 다음의 결괄를 반영해라.
+                return (index + 1) * 100;
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="Chrysanthemum.jpg"/>
+    <img src="Desert.jpg"/>
+    <img src="Hydrangeas.jpg"/>
+</body>
+</html>

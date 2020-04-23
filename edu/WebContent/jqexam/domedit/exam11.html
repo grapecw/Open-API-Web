@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script>
+        $(document).ready(function () {       
+        	// 얘는 첫번째 하나만 적용시킨다.
+           /*  var html = $('h1').html();          
+            alert(html);   */
+            
+            // 여러개의 태그에 적용하고 싶다면 무조건 each
+            // 첫번째 매서드는 무조건 index 두번째가 찾아진 돔 객채의 element를 전달한다.
+            $('h1').each(function(index, data){
+            	// innerhtml과 똑같은 얘.
+            	var html = $(data).html();          
+                alert(html);
+            });  
+        });
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

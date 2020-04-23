@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>New Web Project</title>
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script>        
+$(document).ready( function() {
+	// 기본 요청 방식은 get방식
+	// 'content/sample.xml'을 요청하겠다.
+   $.ajax('content/sample.xml', {
+	   // 성공했을때 호출되는 함수.
+	   // data 가 응답됬을때 오는 것
+      success :  function(data) {                    
+        $(data).find('testxml').each(function() { 
+        	// 'testxml' 밑에 있는 'name'의 태그를 찾는다.
+          $('body').append("<h1>"+$(this).find('name').text() + '</h1>');
+          $('body').append("<h1>"+$(this).find('age').text() + '</h1>');
+          $('body').append("<h1>"+$(this).find('kind').text() + '</h1>');
+        });
+      }
+    });
+});
+</script>
+</head>
+<body>
+	<h1>jQuery 로 구현하는 AJAX 프로그램  - XML</h1>
+</body>
+</html>
